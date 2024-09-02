@@ -1,0 +1,55 @@
+<div class="container mx-auto p-4">
+    <div class="flex flex-wrap justify-center">
+        <!-- Columna Izquierda: Formulario -->
+        <div class="w-full lg:w-1/2 p-4">
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="bg-blue-600 text-white text-center py-4">
+                    <h3 class="text-xl font-bold uppercase">Crear Nuevo Cliente</h3>
+                </div>
+                <div class="p-6">
+                    <form action="/add" method="post" class="space-y-4">
+                        <!-- Campo Cédula -->
+                        <div class="flex items-center">
+                            <label class="w-32 text-gray-700 font-medium" for="Cedula">Cédula</label>
+                            <input type="number" class="form-input mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200" name="Cedula" id="Cedula" placeholder="Ejemplo: 12345678" required>
+                        </div>
+                        <!-- Campo Nombres -->
+                        <div class="flex items-center">
+                            <label class="w-32 text-gray-700 font-medium" for="Nombres">Nombres</label>
+                            <input type="text" class="form-input mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200" name="Nombres" id="Nombres" placeholder="Ejemplo: Luis Angel" required>
+                        </div>
+                        <!-- Campo Apellidos -->
+                        <div class="flex items-center">
+                            <label class="w-32 text-gray-700 font-medium" for="Apellidos">Apellidos</label>
+                            <input type="text" class="form-input mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200" name="Apellidos" id="Apellidos" placeholder="Ejemplo: Fernandez" required>
+                        </div>
+                        <!-- Campo Dirección -->
+                        <div class="flex items-center">
+                            <label class="w-32 text-gray-700 font-medium" for="Direccion">Dirección</label>
+                            <input type="text" name="Direccion" id="Direccion" placeholder="Buscar dirección" class="block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200">
+                        </div>
+                        <!-- Campo Ubicación (Coordenadas) -->
+                        <div class="flex items-center">
+                            <label class="w-32 text-gray-700 font-medium" for="Ubicacion">Ubicación</label>
+                            <input type="text" class="form-input mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md bg-gray-100 text-gray-500 cursor-not-allowed" name="Ubicacion" id="Ubicacion" placeholder="Latitud, Longitud" required readonly>
+                        </div>
+                        <div class="mt-6">
+                            <button class="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700">Crear</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Columna Derecha: Mapa y Buscador -->
+        <div class="w-full lg:w-1/2 p-4">
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-2 flex">
+                    <input type="text" name="Direccion" id="busqueda" placeholder="Buscar dirección" class="flex-grow px-4 py-2 border border-gray-300 rounded-l-md focus:ring focus:ring-blue-200">
+                    <button onclick="searchAddress()" class="w-40 ml-3 bg-blue-600 text-white py-2 rounded-r-md hover:bg-blue-700">Buscar</button>
+                </div>
+                <div id="map" class="mt-4 h-72 rounded-lg shadow-md"></div>
+            </div>
+        </div>
+    </div>
+</div>

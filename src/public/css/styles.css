@@ -1,0 +1,12 @@
+#map {
+  height: 400px;
+  width: 100%;
+}
+#search-input {
+  width: 300px;
+  margin-bottom: 10px;
+}
+#Ubicacion {
+  margin: 10px 0;
+  width: 100%;
+}

@@ -1,0 +1,57 @@
+<div class="container mx-auto mt-10 p-4">
+    <div class="flex flex-col">
+        <h3 class="text-center text-2xl font-bold uppercase py-4">Lista de Clientes</h3>
+        {{#if clientes.length}}
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white border border-gray-200">
+                <thead>
+                    <tr class="bg-gray-800 text-white">
+                        <th scope="col" class="px-6 py-3 text-left text-sm font-medium uppercase">Cédula</th>
+                        <th scope="col" class="px-6 py-3 text-left text-sm font-medium uppercase">Nombres</th>
+                        <th scope="col" class="px-6 py-3 text-left text-sm font-medium uppercase">Apellidos</th>
+                        <th scope="col" class="px-6 py-3 text-left text-sm font-medium uppercase">Dirección</th>
+                        <th scope="col" class="px-6 py-3 text-left text-sm font-medium uppercase">Ubicación</th>
+                        <th scope="col" class="px-6 py-3 text-left text-sm font-medium uppercase">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each clientes}}
+                    <tr class="border-b border-gray-200">
+                        <td class="px-6 py-4 text-sm text-gray-700">{{Cedula}}</td>
+                        <td class="px-6 py-4 text-sm text-gray-700">{{Nombres}}</td>
+                        <td class="px-6 py-4 text-sm text-gray-700">{{Apellidos}}</td>
+                        <td class="px-6 py-4 text-sm text-gray-700">{{Direccion}}</td>
+                        <td class="px-6 py-4 text-sm text-gray-700">{{Ubicacion}}</td>
+                        <td class="px-6 py-4 text-sm text-gray-700">
+                            <div class="flex space-x-2">
+                                <a href="/edit/{{Cedula}}" class="bg-yellow-500 text-white py-1 px-2 rounded hover:bg-yellow-600">
+                                    <i class="fa-solid fa-pencil"></i>
+                                </a>
+                                <a href="/delete/{{Cedula}}" class="bg-red-500 text-white py-1 px-2 rounded hover:bg-red-600">
+                                    <i class="fa-solid fa-trash"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+                <tfoot>
+                    <tr class="bg-gray-800 text-white">
+                        <td colspan="6" class="px-6 py-3 text-center">REGISTRO DE CLIENTES</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        {{else}}
+        <div class="max-w-md mx-auto bg-white shadow-md rounded-lg overflow-hidden mt-8">
+            <div class="bg-blue-500 text-white text-center py-4">
+                <h3 class="text-lg font-bold">Debes crear un cliente</h3>
+            </div>
+            <div class="p-6 text-center">
+                <p class="mb-4">Presiona este botón para que puedas registrar a un cliente en la aplicación</p>
+                <a href="/add" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Ir a crear</a>
+            </div>
+        </div>
+        {{/if}}
+    </div>
+</div>
