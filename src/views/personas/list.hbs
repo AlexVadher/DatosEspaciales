@@ -11,6 +11,7 @@
                         <th scope="col" class="px-6 py-3 text-left text-sm font-medium uppercase">Apellidos</th>
                         <th scope="col" class="px-6 py-3 text-left text-sm font-medium uppercase">Dirección</th>
                         <th scope="col" class="px-6 py-3 text-left text-sm font-medium uppercase">Ubicación</th>
+                        <th scope="col" class="px-6 py-3 text-left text-sm font-medium uppercase">Distancia (km)</th>
                         <th scope="col" class="px-6 py-3 text-left text-sm font-medium uppercase">Acciones</th>
                     </tr>
                 </thead>
@@ -22,6 +23,13 @@
                         <td class="px-6 py-4 text-sm text-gray-700">{{Apellidos}}</td>
                         <td class="px-6 py-4 text-sm text-gray-700">{{Direccion}}</td>
                         <td class="px-6 py-4 text-sm text-gray-700">{{Ubicacion}}</td>
+                        <td class="px-6 py-4 text-sm text-gray-700">
+                            {{#if distancia}}
+                                {{distancia}}
+                            {{else}}
+                                N/A
+                            {{/if}}
+                        </td>
                         <td class="px-6 py-4 text-sm text-gray-700">
                             <div class="flex space-x-2">
                                 <a href="/edit/{{Cedula}}" class="bg-yellow-500 text-white py-1 px-2 rounded hover:bg-yellow-600">
@@ -37,7 +45,7 @@
                 </tbody>
                 <tfoot>
                     <tr class="bg-gray-800 text-white">
-                        <td colspan="6" class="px-6 py-3 text-center">REGISTRO DE CLIENTES</td>
+                        <td colspan="7" class="px-6 py-3 text-center">REGISTRO DE CLIENTES</td>
                     </tr>
                 </tfoot>
             </table>
@@ -53,5 +61,11 @@
             </div>
         </div>
         {{/if}}
+    </div>
+    <!-- Columna Derecha: Mapa y Buscador -->
+    <div class="w-full lg:w-full p-4">
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <div id="map" class="mt-4 h-72 rounded-lg shadow-md"></div>
+        </div>
     </div>
 </div>
