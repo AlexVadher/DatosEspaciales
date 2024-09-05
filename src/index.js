@@ -3,7 +3,7 @@ import morgan from 'morgan';
 import {engine} from 'express-handlebars';
 import {join, dirname} from 'path';
 import {fileURLToPath} from 'url';
-import personasRoutes from './routes/personas.routes.js';
+import clientesRoutes from './routes/clientes.routes.js';
 import dotenv from 'dotenv';
 
 dotenv.config(); // cargar variables de entorno
@@ -44,7 +44,7 @@ app.get('/', (req, res) => {
 });
 
 // Rutas de personas (clientes) de la aplicación CRUD de Node.js
-app.use(personasRoutes);
+app.use(clientesRoutes);
 
 // public files (static files)
 app.use(express.static(join(__dirname, 'public')));
