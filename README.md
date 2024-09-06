@@ -56,25 +56,29 @@ src/
 
 ## Instalación
 1. Clona el repositorio:
+```bash
 git clone https://github.com/AlexVadher/DatosEspaciales.git
 cd DatosEspaciales
-
+```
 2. Instala las dependencias:
+```bash
 npm install
-
+```
 3. Configura la base de datos en src/config/database.js:
+```bash
 const pool = mysql.createPool({
     host: 'localhost',
     user: 'tu_usuario',
     password: 'tu_contraseña',
     database: 'tu_base_de_datos'
 });
-
+```
 4. Añade tu API Key de Google Maps en las vistas correspondientes (views/personas/add.hbs y views/personas/edit.hbs).
 
 5. Ejecuta el servidor:
+```bash
 npm start
-
+```
 6. Accede a la aplicación en http://localhost:3000.
 
 ## Uso
