@@ -6,6 +6,8 @@ Este proyecto es un Sistema de Información multicapa que permite registrar y ge
 
 El proyecto está desarrollado con Node.js, Express, Handlebars para el frontend y sigue los patrones de diseño DAO, DTO, y Singleton. Los datos son almacenados en una base de datos MySQL.
 
+![Inicio](public/img/Inicio.png "Inicio de nuestro proyecto")
+
 ## Funcionalidades
 
 CRUD de Estudiantes: Registrar, visualizar, editar y eliminar estudiantes.
@@ -88,14 +90,18 @@ npm start
 - Introduce los datos del estudiante (cédula, nombre, apellidos, dirección).
 - Utiliza la interfaz de Google Maps para marcar la ubicación del estudiante.
 - Guarda el estudiante.
+![Añadir](public/img/Crear.png "Añadir Estudiante")
 
 ### Visualizar y Editar Estudiantes
 - Ve a http://localhost:3000/clientes.
 - Verás una lista de los estudiantes registrados.
 - Haz clic en Editar para modificar la información de un estudiante o en Eliminar para eliminarlo.
+![Editar](public/img/EDITAR.png "Editar estudiante")
 
 ### Ordenar Estudiantes por Distancia
 - Introduce un punto de referencia (latitud y longitud) para ordenar la lista de estudiantes por distancia.
+![Listar](public/img/Listar.png "Listado de estudiantes")
+
 ## Tecnologías Utilizadas
 - Node.js: Plataforma de desarrollo.
 - Express: Framework para construir aplicaciones web.
