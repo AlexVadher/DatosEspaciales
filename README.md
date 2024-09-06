@@ -6,16 +6,17 @@ Este proyecto es un Sistema de Información multicapa que permite registrar y ge
 
 El proyecto está desarrollado con Node.js, Express, Handlebars para el frontend y sigue los patrones de diseño DAO, DTO, y Singleton. Los datos son almacenados en una base de datos MySQL.
 
-![Inicio](public/img/Inicio.png "Inicio de nuestro proyecto")
+![Inicio](./public/img/Inicio.png "Inicio de nuestro proyecto")
 
 ## Funcionalidades
 
-CRUD de Estudiantes: Registrar, visualizar, editar y eliminar estudiantes.
-Datos espaciales: Utilizar Google Maps para seleccionar la ubicación (latitud y longitud) de los estudiantes.
-Ordenar por Distancia: Visualizar una lista de estudiantes organizados por distancia a partir de un punto de referencia (por ejemplo, la universidad).
+- CRUD de Estudiantes: Registrar, visualizar, editar y eliminar estudiantes.
+- Datos espaciales: Utilizar Google Maps para seleccionar la ubicación (latitud y longitud) de los estudiantes.
+- Ordenar por Distancia: Visualizar una lista de estudiantes organizados por distancia a partir de un punto de referencia (por ejemplo, la universidad).
 
 ## Estructura del Proyecto
 
+```
 src/
 │
 ├── config/
@@ -50,6 +51,7 @@ src/
 │   └── index.hbs            # Página principal del proyecto
 │
 └── index.js                 # Punto de entrada del servidor
+```
 
 ## Requisitos Previos
 - Node.js v14 o superior
@@ -67,7 +69,7 @@ cd DatosEspaciales
 npm install
 ```
 3. Configura la base de datos en src/config/database.js:
-```bash
+```javascript
 const pool = mysql.createPool({
     host: 'localhost',
     user: 'tu_usuario',
@@ -90,17 +92,17 @@ npm start
 - Introduce los datos del estudiante (cédula, nombre, apellidos, dirección).
 - Utiliza la interfaz de Google Maps para marcar la ubicación del estudiante.
 - Guarda el estudiante.
-![Añadir](public/img/Crear.png "Añadir Estudiante")
+![Añadir](./public/img/Crear.png "Añadir Estudiante")
 
 ### Visualizar y Editar Estudiantes
 - Ve a http://localhost:3000/clientes.
 - Verás una lista de los estudiantes registrados.
 - Haz clic en Editar para modificar la información de un estudiante o en Eliminar para eliminarlo.
-![Editar](public/img/EDITAR.png "Editar estudiante")
-
+![Editar](./public/img/EDITAR.png "Editar estudiante")
 ### Ordenar Estudiantes por Distancia
 - Introduce un punto de referencia (latitud y longitud) para ordenar la lista de estudiantes por distancia.
-![Listar](public/img/Listar.png "Listado de estudiantes")
+
+<img src="./public/img/Listar.png" alt="Listado de estudiantes" width="500">
 
 ## Tecnologías Utilizadas
 - Node.js: Plataforma de desarrollo.
